@@ -256,7 +256,7 @@ SIGNAL("opcode")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 10;
+	WIDTH = 5;
 	LSB_INDEX = 0;
 	DIRECTION = INPUT;
 	PARENT = "";
@@ -402,56 +402,6 @@ SIGNAL("result[0]")
 	PARENT = "result";
 }
 
-SIGNAL("opcode[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "opcode";
-}
-
-SIGNAL("opcode[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "opcode";
-}
-
-SIGNAL("opcode[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "opcode";
-}
-
-SIGNAL("opcode[8]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "opcode";
-}
-
-SIGNAL("opcode[9]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "opcode";
-}
-
 TRANSITION_LIST("clock")
 {
 	NODE
@@ -498,7 +448,7 @@ TRANSITION_LIST("inA[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -525,7 +475,7 @@ TRANSITION_LIST("inA[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -552,7 +502,7 @@ TRANSITION_LIST("inA[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -570,7 +520,7 @@ TRANSITION_LIST("inB[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -597,7 +547,7 @@ TRANSITION_LIST("inB[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -754,51 +704,6 @@ TRANSITION_LIST("result[0]")
 	}
 }
 
-TRANSITION_LIST("opcode[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("opcode[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("opcode[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("opcode[8]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("opcode[9]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
 DISPLAY_LINE
 {
 	CHANNEL = "clock";
@@ -929,7 +834,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 0;
 	CHILDREN = 14, 15, 16, 17, 18, 19, 20, 21;
@@ -939,7 +844,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -949,7 +854,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 15;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -959,7 +864,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 16;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -969,7 +874,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 17;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -979,7 +884,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 18;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -989,7 +894,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 19;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -999,7 +904,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 20;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -1009,7 +914,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "inB[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Signed;
+	RADIX = Unsigned;
 	TREE_INDEX = 21;
 	TREE_LEVEL = 1;
 	PARENT = 13;
@@ -1019,68 +924,18 @@ DISPLAY_LINE
 {
 	CHANNEL = "opcode";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Binary;
 	TREE_INDEX = 22;
 	TREE_LEVEL = 0;
-	CHILDREN = 23, 24, 25, 26, 27, 28, 29, 30, 31, 32;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "opcode[9]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 23;
-	TREE_LEVEL = 1;
-	PARENT = 22;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "opcode[8]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 24;
-	TREE_LEVEL = 1;
-	PARENT = 22;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "opcode[7]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 25;
-	TREE_LEVEL = 1;
-	PARENT = 22;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "opcode[6]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 26;
-	TREE_LEVEL = 1;
-	PARENT = 22;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "opcode[5]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 27;
-	TREE_LEVEL = 1;
-	PARENT = 22;
+	CHILDREN = 23, 24, 25, 26, 27;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "opcode[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 28;
+	RADIX = Binary;
+	TREE_INDEX = 23;
 	TREE_LEVEL = 1;
 	PARENT = 22;
 }
@@ -1089,8 +944,8 @@ DISPLAY_LINE
 {
 	CHANNEL = "opcode[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 29;
+	RADIX = Binary;
+	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
 	PARENT = 22;
 }
@@ -1099,8 +954,8 @@ DISPLAY_LINE
 {
 	CHANNEL = "opcode[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 30;
+	RADIX = Binary;
+	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
 	PARENT = 22;
 }
@@ -1109,8 +964,8 @@ DISPLAY_LINE
 {
 	CHANNEL = "opcode[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 31;
+	RADIX = Binary;
+	TREE_INDEX = 26;
 	TREE_LEVEL = 1;
 	PARENT = 22;
 }
@@ -1119,8 +974,8 @@ DISPLAY_LINE
 {
 	CHANNEL = "opcode[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 32;
+	RADIX = Binary;
+	TREE_INDEX = 27;
 	TREE_LEVEL = 1;
 	PARENT = 22;
 }
@@ -1129,90 +984,90 @@ DISPLAY_LINE
 {
 	CHANNEL = "result";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 33;
+	RADIX = Unsigned;
+	TREE_INDEX = 28;
 	TREE_LEVEL = 0;
-	CHILDREN = 34, 35, 36, 37, 38, 39, 40, 41;
+	CHILDREN = 29, 30, 31, 32, 33, 34, 35, 36;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 34;
+	RADIX = Unsigned;
+	TREE_INDEX = 29;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 35;
+	RADIX = Unsigned;
+	TREE_INDEX = 30;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 36;
+	RADIX = Unsigned;
+	TREE_INDEX = 31;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 37;
+	RADIX = Unsigned;
+	TREE_INDEX = 32;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 38;
+	RADIX = Unsigned;
+	TREE_INDEX = 33;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 39;
+	RADIX = Unsigned;
+	TREE_INDEX = 34;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 40;
+	RADIX = Unsigned;
+	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "result[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 41;
+	RADIX = Unsigned;
+	TREE_INDEX = 36;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 28;
 }
 
 TIME_BAR
